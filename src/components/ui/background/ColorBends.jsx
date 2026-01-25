@@ -97,8 +97,8 @@ void main() {
 `;
 
 export default function ColorBends({
-  className,
-  style,
+  className = "",
+  style = {},
   rotation = 45,
   speed = 0.2,
   colors = [],
