@@ -11,10 +11,10 @@ export const FeaturedArticles = () => {
       className="py-24 md:py-32 relative bg-background/75 border-b border-white/5"
     >
       <div className="px-6 md:px-24 max-w-[90rem] mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+        <div className="flex flex-col md:flex-row justify-between mb-16">
           <div className="flex flex-col">
-            <span className="font-mono text-xs text-brand-accent tracking-widest mb-2">
-              [ 05 ]
+            <span className="font-mono text-xs text-brand-primary tracking-widest mb-2">
+              [ 05 : FEATURED ARTICLES ]
             </span>
             <h2 className="text-4xl md:text-6xl font-serif italic text-white">
               Insights

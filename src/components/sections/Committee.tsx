@@ -10,7 +10,7 @@ export const Committee = () => {
     >
       <div className="px-6 md:px-24 max-w-[90rem] mx-auto mb-12">
         <SectionHeading
-          number="06"
+          number="06 : EVENT ORGANIZERS"
           title="Executive"
           subtitle="Committee"
           align="left"

@@ -9,7 +9,7 @@ export const Hero = () => {
 
       <div className="max-w-[100rem] w-full mx-auto relative z-10 border-b border-white/10 pb-12">
         <div className="flex items-center gap-3 mb-8">
-          <span className="font-mono text-xs tracking-[0.2em] text-white/50">
+          <span className="font-mono text-xs tracking-[0.2em] text-white/80">
             ORGANIZED BY ACM & IEEE INSAT
           </span>
         </div>
@@ -28,7 +28,7 @@ export const Hero = () => {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between mt-8 max-w-[100rem] mx-auto w-full">
-        <p className="max-w-md text-lg text-white/60 font-medium">
+        <p className="max-w-md text-lg text-white/80 font-medium">
           Beyond the algorithm. Beyond the model. We explore the singularity
           where code meets consciousness.
         </p>

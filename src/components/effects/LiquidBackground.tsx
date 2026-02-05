@@ -8,7 +8,7 @@ export const LiquidBackground = () => {
         rotation={45}
         speed={0.2}
         colors={
-          ["#060606", "#1a0b3b", "#4d1dc2", "#00d4ff"] as unknown as never[]
+          ["#060606", "#1a0b3b", "#0383FC", "#0383FC"] as unknown as never[]
         }
         transparent
         autoRotate={0.65}

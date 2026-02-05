@@ -26,32 +26,69 @@ export const COMMITTEE = [
   {
     name: "Narimane Mezned",
     role: "Chairwoman",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400",
+    image: "/committee/narimane_mezned.JPG",
     color: "brand-secondary",
   },
   {
     name: "Israa Soudani",
     role: "Vice Chairwoman",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400",
+    image: "/committee/israa_soudani.JPG",
     color: "brand-primary",
   },
   {
     name: "Malek Azri",
     role: "Treasurer",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400",
+    image: "/committee/malek_azri.JPG",
     color: "brand-accent",
   },
   {
     name: "Emna Graja",
     role: "Technical Manager",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400",
+    image: "/committee/emna_graja.JPG",
     color: "brand-secondary",
   },
-  // Add remaining members...
+  {
+    name: "Mayssa El Hawet",
+    role: "Human Resources Manager",
+    image: "/committee/mayssa_el_hawet.JPG",
+    color: "brand-primary",
+  },
+  {
+    name: "Jihen Somai",
+    role: "General Secretary",
+    image: "/committee/jihen_somai.JPG",
+    color: "brand-accent",
+  },
+  {
+    name: "Malek Meherzi",
+    role: "Organization Manager",
+    image: "/committee/malek_meherzi.JPG",
+    color: "brand-secondary",
+  },
+  {
+    name: "Youssef Mhamdi",
+    role: "Logistics Manager",
+    image: "/committee/youssef_mhamdi.JPG",
+    color: "brand-primary",
+  },
+  {
+    name: "Mayssam Hergli",
+    role: "Media Manager",
+    image: "/committee/mayssam_hergli.JPG",
+    color: "brand-accent",
+  },
+  {
+    name: "Emna Helali",
+    role: "External Relations Manager",
+    image: "/committee/emna_helali.JPG",
+    color: "brand-secondary",
+  },
+  {
+    name: "Eya Fetni",
+    role: "Marketing Manager",
+    image: "/committee/eya_fetni.JPG",
+    color: "brand-primary",
+  },
 ];
 
 export const FEATURED_ARTICLES = [

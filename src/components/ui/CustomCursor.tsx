@@ -50,7 +50,7 @@ export const CustomCursor = () => {
 
       {/* Glow Ring */}
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 border border-brand-primary rounded-full pointer-events-none z-[9998] mix-blend-difference"
+        className="fixed top-0 left-0 w-10 h-10 border border-brand-primary rounded-full pointer-events-none z-9999 "
         animate={{
           x: mousePosition.x - 24,
           y: mousePosition.y - 24,

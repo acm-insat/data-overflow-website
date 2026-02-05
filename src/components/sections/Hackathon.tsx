@@ -20,7 +20,7 @@ export const Hackathon = () => {
       <div className="px-6 md:px-24 max-w-[90rem] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Text Content */}
         <div>
-          <span className="font-mono text-xs text-brand-accent tracking-widest animate-pulse">
+          <span className="font-mono text-xs text-brand-primary tracking-widest animate-pulse">
             [ 04 : LIVE_EVENT ]
           </span>
           <h2 className="text-[clamp(3rem,6vw,5rem)] font-black tracking-tighter leading-none mt-4 mb-8 text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">
@@ -32,7 +32,7 @@ export const Hackathon = () => {
           </p>
           <button
             onClick={() => setModalOpen(true)}
-            className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-brand-accent hover:text-white transition-colors duration-300 clip-path-polygon"
+            className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-brand-accent transition-colors duration-300 clip-path-polygon hover:-translate-y-1 hover:scale-105 hover:transition-all hover:ease-in-out cursor-pointer"
           >
             Register Team
           </button>

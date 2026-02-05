@@ -11,13 +11,13 @@ export const Vision = () => {
       <div className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
         {/* Left Column: Context */}
         <div className="col-span-1 lg:col-span-4 flex flex-col justify-start">
-          <span className="font-mono text-xs text-brand-secondary tracking-widest mb-4">
+          <span className="font-mono text-xs text-brand-primary tracking-widest mb-4">
             [ 01 : MANIFESTO ]
           </span>
           <h2 className="font-sans text-3xl font-bold mb-6 text-white">
             The Vision
           </h2>
-          <p className="font-sans text-lg text-white/60 leading-relaxed">
+          <p className="font-sans text-lg text-white/90 leading-relaxed">
             Data Overflow is not just a conference; it is a movement. In an age
             of static information, we champion the fluid, exploring how data
             shapes our reality and defines our future.
@@ -44,7 +44,7 @@ export const Vision = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="italic text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-accent font-light"
+              className="italic text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-glow font-light"
             >
               new water
             </motion.span>
@@ -58,7 +58,7 @@ export const Vision = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.6 + i * 0.05 }}
-                    className="inline-block mr-3 text-white/50"
+                    className="inline-block mr-3 text-white/80 text-5xl"
                   >
                     {word}
                   </motion.span>

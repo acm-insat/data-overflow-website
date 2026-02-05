@@ -15,16 +15,16 @@ export const Workshops = () => {
 
       <div className="px-6 md:px-24 max-w-[90rem] mx-auto relative z-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20">
+        <div className="flex flex-col justify-between mb-16 md:mb-20 gap-7">
           <div>
             <span className="font-mono text-xs text-brand-primary tracking-widest block mb-2">
-              [ 02 ]
+              [ 02 : WORKSHOPS ]
             </span>
             <h2 className="text-4xl md:text-6xl font-serif italic text-white">
               The Workshops
             </h2>
           </div>
-          <p className="font-sans text-white/50 max-w-sm text-left md:text-right mt-6 md:mt-0">
+          <p className="font-sans text-white/80 max-w-sm text-left mt-6 md:mt-0">
             Intensive learning modules designed to elevate your understanding of
             machine learning architectures.
           </p>
