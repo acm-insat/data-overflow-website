@@ -9,7 +9,7 @@ export const AIDay = () => {
       id="aiday"
       className="py-24 md:py-32 px-6 md:px-24 relative bg-white/5 backdrop-blur-3xl border-y border-white/5 "
     >
-      <div className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* Left: Content */}
         <div className="col-span-1 lg:col-span-5">
           <SectionHeading

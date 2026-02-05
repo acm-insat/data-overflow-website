@@ -8,12 +8,12 @@ export const Workshops = () => {
   return (
     <section
       id="workshops"
-      className="py-24 md:py-32 relative bg-black/20 border-y border-white/5"
+      className="py-24 md:py-32 px-6 md:px-24 relative bg-black/20 border-y border-white/5"
     >
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none" />
 
-      <div className="max-w-[90rem] mx-auto relative z-10">
+      <div className="w-full mx-auto relative z-10">
         {/* Header */}
         <div className="flex flex-col justify-between mb-16 md:mb-20 gap-7">
           <div>

@@ -6,9 +6,9 @@ export const Committee = () => {
   return (
     <section
       id="committee"
-      className="py-24 md:py-32 relative overflow-hidden bg-black"
+      className="py-24 md:py-32 px-6 md:px-24 relative overflow-hidden bg-black"
     >
-      <div className="max-w-[90rem] mx-auto mb-12">
+      <div className="w-full mx-auto mb-12">
         <SectionHeading
           number="06 : EVENT ORGANIZERS"
           title="Executive"
@@ -18,7 +18,7 @@ export const Committee = () => {
       </div>
 
       {/* Horizontal Scroll Container (Mobile Friendly) */}
-      <div className="flex lg:grid lg:grid-cols-5 gap-6 overflow-x-auto lg:overflow-visible pb-12 px-6 md:px-24 snap-x snap-mandatory scrollbar-hide">
+      <div className="flex lg:grid lg:grid-cols-5 gap-6 overflow-x-auto lg:overflow-visible pb-12  snap-x snap-mandatory scrollbar-hide">
         {COMMITTEE.map((member, index) => (
           <div
             key={index}

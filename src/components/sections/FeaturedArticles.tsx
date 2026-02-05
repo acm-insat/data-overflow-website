@@ -8,9 +8,9 @@ export const FeaturedArticles = () => {
   return (
     <section
       id="articles"
-      className="py-24 md:py-32 relative bg-background/75 border-b border-white/5"
+      className="py-24 md:py-32 px-6 md:px-24 relative bg-background/75 border-b border-white/5"
     >
-      <div className=" max-w-[90rem] mx-auto relative z-10">
+      <div className="w-full mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between mb-16">
           <div className="flex flex-col">
             <span className="font-mono text-xs text-brand-primary tracking-widest mb-2">

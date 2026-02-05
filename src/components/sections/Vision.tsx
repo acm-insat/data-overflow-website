@@ -8,16 +8,16 @@ export const Vision = () => {
 
   return (
     <section id="vision" className="py-24 md:py-32 px-6 md:px-24 relative z-10">
-      <div className="max-w-[90rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+      <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-30">
         {/* Left Column: Context */}
         <div className="col-span-1 lg:col-span-4 flex flex-col justify-start">
           <span className="font-mono text-xs text-brand-primary tracking-widest mb-4">
             [ 01 : MANIFESTO ]
           </span>
-          <h2 className="font-sans text-3xl font-bold mb-6 text-white">
+          <h2 className="font-sans text-4xl font-bold mb-6 text-white">
             The Vision
           </h2>
-          <p className="font-sans text-lg text-white/90 leading-relaxed">
+          <p className="font-sans text-xl text-white/90 leading-relaxed">
             Data Overflow is not just a conference; it is a movement. In an age
             of static information, we champion the fluid, exploring how data
             shapes our reality and defines our future.

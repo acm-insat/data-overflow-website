@@ -11,13 +11,13 @@ export const Hackathon = () => {
   return (
     <section
       id="hackathon"
-      className="py-24 md:py-32 relative overflow-hidden bg-black/5 text-white"
+      className="py-24 md:py-32 px-6 md:px-24 relative overflow-hidden bg-black/5 text-white"
     >
       {/* Background Decor */}
       <div className="absolute inset-0 bg-cyber-grid opacity-10 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-radial from-brand-secondary/20 to-transparent opacity-40 pointer-events-none" />
 
-      <div className=" max-w-[90rem] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className=" w-auto mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Text Content */}
         <div>
           <span className="font-mono text-xs text-brand-primary tracking-widest animate-pulse">
