@@ -75,7 +75,7 @@ export default function ArchivePage() {
             <GlassCard className="h-full hover:-translate-y-2">
               <div className="aspect-video bg-white/5 rounded-lg mb-4 overflow-hidden relative">
                 {/* Image goes here */}
-                <div className="absolute inset-0 bg-brand-primary/10 mix-blend-overlay" />
+                <div className="absolute inset-0 bg-brand-primary/10" />
               </div>
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-[10px] font-mono text-brand-secondary px-2 py-1 border border-brand-secondary/30 rounded">
