@@ -8,7 +8,7 @@ export const Committee = () => {
       id="committee"
       className="py-24 md:py-32 relative overflow-hidden bg-black"
     >
-      <div className="px-6 md:px-24 max-w-[90rem] mx-auto mb-12">
+      <div className="max-w-[90rem] mx-auto mb-12">
         <SectionHeading
           number="06 : EVENT ORGANIZERS"
           title="Executive"

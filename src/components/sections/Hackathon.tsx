@@ -17,7 +17,7 @@ export const Hackathon = () => {
       <div className="absolute inset-0 bg-cyber-grid opacity-10 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-radial from-brand-secondary/20 to-transparent opacity-40 pointer-events-none" />
 
-      <div className="px-6 md:px-24 max-w-[90rem] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className=" max-w-[90rem] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Text Content */}
         <div>
           <span className="font-mono text-xs text-brand-primary tracking-widest animate-pulse">
