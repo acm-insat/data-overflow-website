@@ -1,6 +1,7 @@
 import { COMMITTEE } from "@/lib/data";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { getImagePath } from "@/lib/getImagePath.utils";
 
 export const Committee = () => {
   return (
@@ -26,7 +27,7 @@ export const Committee = () => {
           >
             <div className="aspect-[3/4] mb-4 rounded-lg overflow-hidden relative bg-white/5 border border-white/5 group-hover:border-brand-primary/50 transition-colors">
               <Image
-                src={member.image}
+                src={getImagePath(member.image)}
                 alt={member.name}
                 fill
                 className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
