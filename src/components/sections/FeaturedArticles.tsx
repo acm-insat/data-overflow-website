@@ -5,6 +5,27 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import Image from "next/image";
 
 export const FeaturedArticles = () => {
+  // Group articles by year
+  const articlesByYear = FEATURED_ARTICLES.reduce(
+    (acc, article) => {
+      // Extract year from date string (e.g., "FEB 05, 2025" -> "2025")
+      const year = article.date.split(", ")[1];
+
+      if (!acc[year]) {
+        acc[year] = [];
+      }
+      acc[year].push(article);
+
+      return acc;
+    },
+    {} as Record<string, typeof FEATURED_ARTICLES>,
+  );
+
+  // Sort years in descending order (newest first)
+  const sortedYears = Object.keys(articlesByYear).sort(
+    (a, b) => parseInt(b) - parseInt(a),
+  );
+
   return (
     <section
       id="articles"
@@ -29,36 +50,52 @@ export const FeaturedArticles = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {FEATURED_ARTICLES.map((article) => (
-            <Link
-              href={`/insights/${article.slug}`}
-              key={article.id}
-              className="block group"
-            >
-              <GlassCard className="h-full hover:-translate-y-2 p-0 overflow-hidden border-transparent bg-white/5">
-                <div className="aspect-video overflow-hidden relative">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    fill
-                    className="object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 text-xs font-mono text-white/50 mb-3">
-                    <span>{article.date}</span>
-                    <span className="w-1 h-1 bg-white/20 rounded-full" />
-                    <span className={`${article.color} font-bold`}>
-                      {article.category}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-brand-primary transition-colors leading-tight">
-                    {article.title}
-                  </h3>
-                </div>
-              </GlassCard>
-            </Link>
+        {/* Render articles grouped by year */}
+        <div className="space-y-16">
+          {sortedYears.map((year) => (
+            <div key={year}>
+              {/* Year heading */}
+              <div className="mb-8 mx-auto">
+                <h3 className="text-2xl md:text-3xl font-serif italic text-white/80 ">
+                  {year}
+                </h3>
+                <div className="h-px bg-gradient-to-r from-white/20 to-transparent mt-3" />
+              </div>
+
+              {/* Articles grid for this year */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {articlesByYear[year].map((article) => (
+                  <Link
+                    href={`/insights/${article.slug}`}
+                    key={article.id}
+                    className="block group"
+                  >
+                    <GlassCard className="h-full hover:-translate-y-2 p-0 overflow-hidden border-transparent bg-white/5">
+                      <div className="aspect-video overflow-hidden relative">
+                        <Image
+                          src={article.image}
+                          alt={article.title}
+                          fill
+                          className="object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <div className="flex items-center gap-3 text-xs font-mono text-white/50 mb-3">
+                          <span>{article.date}</span>
+                          <span className="w-1 h-1 bg-white/20 rounded-full" />
+                          <span className={`${article.color} font-bold`}>
+                            {article.category}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-white group-hover:text-brand-primary transition-colors leading-tight">
+                          {article.title}
+                        </h3>
+                      </div>
+                    </GlassCard>
+                  </Link>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
