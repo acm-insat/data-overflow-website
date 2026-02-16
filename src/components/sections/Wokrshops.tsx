@@ -1,7 +1,7 @@
 "use client";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { Check, ArrowRight } from "lucide-react";
-import { WORKSHOPS } from "@/lib/data"; // Assumes you added the data structure from previous step
+import { WORKSHOPS } from "@/lib/data/data"; // Assumes you added the data structure from previous step
 import { cn } from "@/lib/utils";
 
 export const Workshops = () => {

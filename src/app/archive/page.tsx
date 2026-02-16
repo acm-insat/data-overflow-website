@@ -3,32 +3,17 @@ import { useState } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import Link from "next/link";
-import { Search } from "lucide-react";
+import Image from "next/image";
 
-// Mock data - ideally imported from lib/data.ts
-const ARTICLES = [
-  {
-    id: 1,
-    title: "Hallucinations in LLMs",
-    category: "GenAI",
-    date: "Feb 05, 2025",
-    slug: "hallucinations",
-  },
-  {
-    id: 2,
-    title: "Accelerated Logistic Regression",
-    category: "ML",
-    date: "Jan 30, 2025",
-    slug: "logistic-regression",
-  },
-  // ...
-];
+import { Search } from "lucide-react";
+import { ALL_BLOG_ARTICLES } from "@/lib/data/blog-articles";
+import { CATEGORIES } from "@/lib/data/blog-categories";
 
 export default function ArchivePage() {
   const [filter, setFilter] = useState("All");
   const [search, setSearch] = useState("");
 
-  const filteredArticles = ARTICLES.filter((article) => {
+  const filteredArticles = ALL_BLOG_ARTICLES.filter((article) => {
     const matchesFilter = filter === "All" || article.category === filter;
     const matchesSearch = article.title
       .toLowerCase()
@@ -56,7 +41,7 @@ export default function ArchivePage() {
           />
         </div>
         <div className="flex gap-2 flex-wrap">
-          {["All", "GenAI", "ML", "DeepMind"].map((cat) => (
+          {["All", ...Object.keys(CATEGORIES)].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
@@ -71,11 +56,16 @@ export default function ArchivePage() {
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredArticles.map((article) => (
-          <Link href={`/insights/${article.slug}`} key={article.id}>
+          <Link href={`/archive/${article.slug}`} key={article.id}>
             <GlassCard className="h-full hover:-translate-y-2">
               <div className="aspect-video bg-white/5 rounded-lg mb-4 overflow-hidden relative">
                 {/* Image goes here */}
-                <div className="absolute inset-0 bg-brand-primary/10" />
+                <Image
+                  className="absolute inset-0 bg-brand-primary/10"
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                />
               </div>
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-[10px] font-mono text-brand-secondary px-2 py-1 border border-brand-secondary/30 rounded">

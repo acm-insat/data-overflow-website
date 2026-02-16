@@ -1,12 +1,21 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { FEATURED_ARTICLES } from "@/lib/data";
-import { GlassCard } from "@/components/ui/GlassCard";
-import Image from "next/image";
+import { ArticleCard } from "../cards/ArticleCard";
+import { ALL_BLOG_ARTICLES } from "@/lib/data/blog-articles";
 
+const SAMPLE_ARTICLES = ALL_BLOG_ARTICLES.slice(0, 6).map((article) => ({
+  id: article.id,
+  href: `/blog/${article.slug}`,
+  title: article.title,
+  date: article.date,
+  category: article.category,
+  image: article.image,
+  slug: article.slug,
+  description: article.description,
+}));
 export const FeaturedArticles = () => {
   // Group articles by year
-  const articlesByYear = FEATURED_ARTICLES.reduce(
+  const articlesByYear = SAMPLE_ARTICLES.reduce(
     (acc, article) => {
       // Extract year from date string (e.g., "FEB 05, 2025" -> "2025")
       const year = article.date.split(", ")[1];
@@ -18,7 +27,7 @@ export const FeaturedArticles = () => {
 
       return acc;
     },
-    {} as Record<string, typeof FEATURED_ARTICLES>,
+    {} as Record<string, typeof SAMPLE_ARTICLES>,
   );
 
   // Sort years in descending order (newest first)
@@ -28,7 +37,7 @@ export const FeaturedArticles = () => {
 
   return (
     <section
-      id="articles"
+      id="insights"
       className="py-24 md:py-32 px-6 md:px-24 relative bg-background/75 border-b border-white/5"
     >
       <div className="w-full mx-auto relative z-10">
@@ -65,34 +74,7 @@ export const FeaturedArticles = () => {
               {/* Articles grid for this year */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {articlesByYear[year].map((article) => (
-                  <Link
-                    href={`/insights/${article.slug}`}
-                    key={article.id}
-                    className="block group"
-                  >
-                    <GlassCard className="h-full hover:-translate-y-2 p-0 overflow-hidden border-transparent bg-white/5">
-                      <div className="aspect-video overflow-hidden relative">
-                        <Image
-                          src={article.image}
-                          alt={article.title}
-                          fill
-                          className="object-cover transform group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
-                        />
-                      </div>
-                      <div className="p-6">
-                        <div className="flex items-center gap-3 text-xs font-mono text-white/50 mb-3">
-                          <span>{article.date}</span>
-                          <span className="w-1 h-1 bg-white/20 rounded-full" />
-                          <span className={`${article.color} font-bold`}>
-                            {article.category}
-                          </span>
-                        </div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-brand-primary transition-colors leading-tight">
-                          {article.title}
-                        </h3>
-                      </div>
-                    </GlassCard>
-                  </Link>
+                  <ArticleCard key={article.id} article={article} />
                 ))}
               </div>
             </div>

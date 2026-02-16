@@ -1,4 +1,4 @@
-import { COMMITTEE } from "@/lib/data";
+import { COMMITTEE } from "@/lib/data/data";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getImagePath } from "@/lib/getImagePath.utils";
