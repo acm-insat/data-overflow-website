@@ -1,6 +1,6 @@
 "use client";
 import { Countdown } from "@/components/ui/Countdown";
-import { EVENT_DATES } from "@/lib/data";
+import { EVENT_DATES } from "@/lib/data/data";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
